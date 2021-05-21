@@ -7,6 +7,8 @@
   --color-body: #918ca4;
 }
 
+/* Typography */
+
 html {
   /* browser sets font-size of html element to be 16px. To keep calculation simpler, we set it to 62.5% of 16 i.e. 10px. Later in font-size of h1 as 70px will become 7 rem.  */
   font-size: 62.5%;
@@ -60,5 +62,36 @@ p {
 
   h3 {
     font-size: 2.4rem;
+  }
+}
+
+/* Links */
+a {
+  text-decoration: none;
+}
+
+.link-arrow {
+  color: var(--color-ascent);
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.link-arrow::after {
+  content: "-->";
+  /* Add a little space before the arrow. No matter what font-size is, we want only this much space. So using size in pixel.*/
+  margin-left: 5px;
+
+  /* Make arrow appaer smoothly and not suddenly*/
+  transition: margin 0.15s;
+}
+
+.link-arrow:hover::after {
+  margin-left: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .link-arrow {
+    font-size: 1.5rem;
   }
 }
