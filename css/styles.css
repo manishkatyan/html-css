@@ -6,3 +6,59 @@
   --color-headings: #1b0760;
   --color-body: #918ca4;
 }
+
+html {
+  /* browser sets font-size of html element to be 16px. To keep calculation simpler, we set it to 62.5% of 16 i.e. 10px. Later in font-size of h1 as 70px will become 7 rem.  */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-size: 2.4rem;
+  /* Line-height as 1.5 means 1.5 x of the current font-size */
+  line-height: 1.5;
+  color: var(--color-body);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-headings);
+  margin-bottom: 1rem;
+}
+
+h1 {
+  /* 1 * font-size of html element */
+  font-size: 7rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+p {
+  margin-top: 0;
+}
+
+/* Above style is for mobile as we do mobile-first. Now let's style for laptop and desktop. */
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 1.8rem;
+  }
+
+  h1 {
+    font-size: 8rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+  }
+
+  h3 {
+    font-size: 2.4rem;
+  }
+}
