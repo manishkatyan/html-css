@@ -6,6 +6,8 @@
   --color-headings: #1b0760;
   --color-body: #918ca4;
   --color-body-darker: #5c5577;
+  --color-border: #ccc;
+  --border-radius: 30px;
 }
 
 /* Typography */
@@ -650,8 +652,8 @@ a {
 }
 
 .hero__tagline {
-  font-size: 2rem;
   color: #b9c3cf;
+  font-size: 2rem;
   letter-spacing: 1px;
   margin: 2rem 0 5rem;
 }
@@ -667,5 +669,68 @@ a {
   .hero__content {
     text-align: left;
     align-self: center;
+  }
+}
+
+/* Inputs */
+
+.input {
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+  color: var(--color-headings);
+  font-size: 2rem;
+  outline: 0;
+  padding: 1.5rem 3.5rem;
+}
+
+::placeholder {
+  color: #cdcbd7;
+}
+
+.input-group {
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  display: flex;
+}
+
+.input-group .input {
+  border: 0;
+  flex-grow: 1;
+  padding: 1.5rem 2rem;
+  width: 0;
+}
+
+.input-group .btn {
+  margin: 4px;
+}
+
+@media screen and (min-width: 1024px) {
+  .input {
+    font-size: 1.5rem;
+  }
+}
+
+/* Domains */
+.block-domain .input-group {
+  box-shadow: 0 0 30px 20px #e6ebee;
+  border: 0;
+  margin: 4rem auto;
+  max-width: 670px;
+}
+
+.block-domain__prices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 6rem);
+  justify-items: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .block-domain__prices {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    max-width: 700px;
   }
 }
