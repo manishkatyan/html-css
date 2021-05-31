@@ -198,8 +198,8 @@ a {
   align-items: center;
 }
 
-.icon-container-accent {
-  background-color: var(--color-ascent);
+.icon-container--accent {
+  background-color: var(--color-accent);
 }
 
 /* Cards */
