@@ -1,0 +1,23 @@
+{
+  "name": "html-css",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manishkatyan/html-css.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manishkatyan/html-css/issues"
+  },
+  "homepage": "https://github.com/manishkatyan/html-css#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
